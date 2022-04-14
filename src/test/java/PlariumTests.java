@@ -21,13 +21,10 @@ public class PlariumTests extends TestBase {
             $(withText("Войти")).click();
         });
         step("Ввести элетронную почту", () -> {
-            $("#email").setValue("29061900a@gmail.com");
-        });
-        step("Кликнуть Далее", () -> {
-            $(withText("Далее")).click();
+            $("#email").setValue("29061900a@gmail.com").pressEnter();
         });
         step("Проверить, что форма авторизации выдала ошибку", () -> {
-            $("button[data-qa-entity=auth.next.step]").shouldHave(text("Пользователь с таким адресом электронной почты не найден. Проверь адрес, зарегистрируйся или обратись в службу поддержки Plarium"));
+            $(".cWCQHG").shouldHave(text("Пользователь с таким адресом электронной почты не найден. Проверь адрес, зарегистрируйся или обратись в службу поддержки Plarium"));
         });
     }
 
@@ -41,22 +38,16 @@ public class PlariumTests extends TestBase {
             $(withText("Войти")).click();
         });
         step("Ввести элетронную почту", () -> {
-            $("#email").setValue("29061990a@gmail.com");
-        });
-        step("Кликнуть Далее", () -> {
-            $(withText("Далее")).click();
+            $("#email").setValue("29061990a@gmail.com").pressEnter();
         });
         step("Ввести пароль", () -> {
-            $("#password").setValue("rfinetd29");
-        });
-        step("Кликнуть Войти", () -> {
-            $(withText("Войти")).click();
+            $("#password").setValue("rfinetd29").pressEnter();
         });
         step("Перейти в профиль ", () -> {
-            $(withText("Показать")).click();
+            $(".giJlUH").click();
         });
         step("Проверить никнейм", () -> {
-            $("div[data-qa-entity=auth.send.button]").click();
+            $(".fFgwTx").shouldHave(text("Kashtos90"));
         });
     }
 }
