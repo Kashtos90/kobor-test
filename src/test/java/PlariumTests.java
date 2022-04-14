@@ -4,21 +4,21 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Configuration.baseUrl;
+import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
-import static java.lang.Thread.sleep;
 
 public class PlariumTests extends TestBase {
 
     @Test
-    @DisplayName("Проверка авторизации")
-    void checkSearchPage() {
+    @DisplayName("Проверка ошибочной авторизации")
+    void badAutorisation() {
         step("Открыть главную страницу", () -> {
             open(baseUrl);
         });
         step("Кликнуть Войти", () -> {
-            $("button[data-qa-entity=header.login]").click();
+            $(withText("Войти")).click();
         });
         step("Ввести элетронную почту", () -> {
             $("#email").setValue("29061900a@gmail.com");
@@ -31,4 +31,32 @@ public class PlariumTests extends TestBase {
         });
     }
 
+    @Test
+    @DisplayName("Проверка успешной авторизации")
+    void suсcessAutorisation() {
+        step("Открыть главную страницу", () -> {
+            open(baseUrl);
+        });
+        step("Кликнуть Войти", () -> {
+            $("button[data-qa-entity=header.login]").click();
+        });
+        step("Ввести элетронную почту", () -> {
+            $("#email").setValue("29061990a@gmail.com");
+        });
+        step("Кликнуть Далее", () -> {
+            $("button[data-qa-entity=auth.next.step]").click();
+        });
+        step("Ввести пароль", () -> {
+            $("#password").setValue("rfinetd29");
+        });
+        step("Кликнуть Войти", () -> {
+            $("button[data-qa-entity=auth.send.button]").click();
+        });
+        step("Перейти в профиль ", () -> {
+            $(withText("Показать")).click();
+        });
+        step("Проверить никнейм", () -> {
+            $("div[data-qa-entity=auth.send.button]").click();
+        });
+    }
 }
