@@ -24,7 +24,7 @@ public class PlariumTests extends TestBase {
             $("#email").setValue("29061900a@gmail.com");
         });
         step("Кликнуть Далее", () -> {
-            $("button[data-qa-entity=auth.next.step]").click();
+            $(withText("Далее")).click();
         });
         step("Проверить, что форма авторизации выдала ошибку", () -> {
             $("button[data-qa-entity=auth.next.step]").shouldHave(text("Пользователь с таким адресом электронной почты не найден. Проверь адрес, зарегистрируйся или обратись в службу поддержки Plarium"));
@@ -38,19 +38,19 @@ public class PlariumTests extends TestBase {
             open(baseUrl);
         });
         step("Кликнуть Войти", () -> {
-            $("button[data-qa-entity=header.login]").click();
+            $(withText("Войти")).click();
         });
         step("Ввести элетронную почту", () -> {
             $("#email").setValue("29061990a@gmail.com");
         });
         step("Кликнуть Далее", () -> {
-            $("button[data-qa-entity=auth.next.step]").click();
+            $(withText("Далее")).click();
         });
         step("Ввести пароль", () -> {
             $("#password").setValue("rfinetd29");
         });
         step("Кликнуть Войти", () -> {
-            $("button[data-qa-entity=auth.send.button]").click();
+            $(withText("Войти")).click();
         });
         step("Перейти в профиль ", () -> {
             $(withText("Показать")).click();
