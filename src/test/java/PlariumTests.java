@@ -14,7 +14,7 @@ public class PlariumTests extends TestBase {
 
     @Test
     @DisplayName("Проверка ошибочной авторизации")
-    void badAutorisation() {
+    void badAuthTest() {
         step("Открыть главную страницу", () -> {
             open(baseUrl);
         });
@@ -31,7 +31,7 @@ public class PlariumTests extends TestBase {
 
     @Test
     @DisplayName("Проверка успешной авторизации")
-    void suсcessAutorisation() {
+    void suсcessAuthTest() {
         step("Открыть главную страницу", () -> {
             open(baseUrl);
         });
@@ -53,7 +53,7 @@ public class PlariumTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Во вкладе Сообщество присутвует ссылка на Блог")
+    @DisplayName("Проверка отображения блога")
     void blogTest() {
         step("Открыть главную страницу", () -> {
             open(baseUrl);
@@ -63,6 +63,34 @@ public class PlariumTests extends TestBase {
         });
         step("Ссылка на Блог отображается во вкладке", () -> {
             $("a[href='/ru/blog/']").shouldBe(visible);
+        });
+    }
+
+    @Test
+    @DisplayName("Проверка англ. языка")
+    void languageTest() {
+        step("Открыть главную страницу", () -> {
+            open(baseUrl);
+        });
+        step("Кликнуть на выбор языка", () -> {
+            $(".fOCTmG").click();
+        });
+        step("В списке присутствует англ. язык", () -> {
+            $(".ktyeqt").shouldHave(text("English"));
+        });
+    }
+
+    @Test
+    @DisplayName("Проверка списка жанров")
+    void genreTest() {
+        step("Открыть главную страницу", () -> {
+            open(baseUrl);
+        });
+        step("Навести курсор на Игры", () -> {
+            $(withText("Игры")).hover();
+        });
+        step("Элемент Жанры содержит Стратегии", () -> {
+            $(".dkxMtQ").shouldHave(text("Стратегии"));
         });
     }
 }

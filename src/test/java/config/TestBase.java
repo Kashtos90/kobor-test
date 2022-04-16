@@ -8,6 +8,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import static com.codeborne.selenide.Selenide.clearBrowserLocalStorage;
+import static com.codeborne.selenide.Selenide.closeWebDriver;
+import static org.openqa.selenium.devtools.v85.network.Network.clearBrowserCookies;
+
 public class TestBase {
 
     @BeforeAll
@@ -25,10 +29,14 @@ public class TestBase {
     }
 
     @AfterEach
-    void addAttachments() {
+    void afterEach() {
         Attach.screenshotAs("Screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
+
+        clearBrowserCookies();
+        clearBrowserLocalStorage();
+        closeWebDriver();
     }
 }
