@@ -3,6 +3,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
@@ -48,6 +49,20 @@ public class PlariumTests extends TestBase {
         });
         step("Проверить никнейм", () -> {
             $(".fFgwTx").shouldHave(text("Kashtos90"));
+        });
+    }
+
+    @Test
+    @DisplayName("Во вкладе Сообщество присутвует ссылка на Блог")
+    void blogTest() {
+        step("Открыть главную страницу", () -> {
+            open(baseUrl);
+        });
+        step("Навести курсор на Сообщество", () -> {
+            $(withText("Сообщество")).hover();
+        });
+        step("Ссылка на Блог отображается во вкладке", () -> {
+            $("a[href='/ru/blog/']").shouldBe(visible);
         });
     }
 }
