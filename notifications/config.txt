@@ -1,12 +1,3 @@
-//Template
-java \
-"-DprojectName=${PROJECT_NAME}" \
-"-Denv=${ENVIRONMENT}" \
-"-DreportLink=${BUILD_URL}" \
-"-Dcomm=Any comment here" \
-"-Dconfig.file=${PATH_TO_FILE}" \
--jar allure-notifications-4.0.jar
-
 //Local
 java "-DprojectName=Plarium Test Run" "-Denv=PROD" "-DreportLink=plarium/" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram_config.json" -jar notifications/allure-notifications-3.1.2.jar
 
@@ -18,4 +9,4 @@ java \
 "-DreportLink=${BUILD_URL}" \
 "-Dcomm=Any comment here" \
 "-Dconfig.file=notifications/telegram_config.json" \
--jar notifications/allure-notifications-4.0.jar
+-jar notifications/allure-notifications-3.1.2.jar
