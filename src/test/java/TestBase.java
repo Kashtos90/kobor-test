@@ -11,8 +11,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import static com.codeborne.selenide.Configuration.baseUrl;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.clearBrowserLocalStorage;
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static io.restassured.RestAssured.sessionId;
 import static org.openqa.selenium.devtools.v85.network.Network.clearBrowserCookies;
 
@@ -21,8 +21,7 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        baseUrl = "https://plarium.com/ru/";
-        open(baseUrl);
+        Configuration.baseUrl = "https://plarium.com/ru/";
         DriverConfig.configure();
         //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
