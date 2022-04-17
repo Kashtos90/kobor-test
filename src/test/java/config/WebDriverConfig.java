@@ -8,25 +8,13 @@ import org.aeonbits.owner.Config;
 })
 public interface WebDriverConfig extends Config {
 
-    @Config.Key("browserName")
-    String browserName();
 
-    @Config.Key("browserVersion")
+    String browser();
     String browserVersion();
-
-    @Config.Key("browserSize")
     String browserSize();
-
-    @Config.Key("remoteUrl")
-    String remoteUrl();
-
-    @Config.Key("videoStorage")
+    String browserMobileView();
+    String remoteDriverUrl();
     String videoStorage();
-
-    @Config.Key("timeoutVideoAttach")
-    int timeoutVideoAttach();
-
-    @Config.Key("timeout")
-    int timeout();
+    String timeout();
 }
 

@@ -16,7 +16,6 @@ import static com.codeborne.selenide.Selenide.sleep;
 public class AllureAttach {
 
     public static final Logger LOGGER = LoggerFactory.getLogger(AllureAttach.class);
-    public static int timeoutVideoAttach = Project.webConfig.timeoutVideoAttach();
 
     @Attachment(value = "{attachName}", type = "text/plain")
     private static String addMessage(String attachName, String text) {
@@ -24,10 +23,8 @@ public class AllureAttach {
     }
 
     public static void addBrowserConsoleLogs() {
-        if (!(Project.webConfig.browserName()).equals("firefox")) {
             addMessage("Browser console logs", DriverUtils.getConsoleLogs());
         }
-    }
 
     @Attachment(value = "{attachName}", type = "image/png")
     public static byte[] addScreenshotAs(String attachName) {
@@ -43,14 +40,14 @@ public class AllureAttach {
         URL videoUrl = DriverUtils.getVideoUrl(sessionId);
         if (videoUrl != null) {
             InputStream videoInputStream = null;
-            sleep(timeoutVideoAttach);
+            sleep(7000);
 
             for (int i = 0; i < 10; i++) {
                 try {
                     videoInputStream = videoUrl.openStream();
                     break;
                 } catch (FileNotFoundException e) {
-                    sleep(timeoutVideoAttach);
+                    sleep(7000);
                 } catch (IOException e) {
                     LOGGER.warn("[ALLURE VIDEO ATTACHMENT ERROR] Cant attach allure video, {}", videoUrl);
                     e.printStackTrace();
