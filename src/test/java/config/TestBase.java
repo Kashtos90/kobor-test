@@ -17,14 +17,19 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static io.restassured.RestAssured.sessionId;
 import static org.openqa.selenium.devtools.v85.network.Network.clearBrowserCookies;
 
-@ExtendWith({AllureJunit5.class})
 public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        DriverConfig.configure();
         Configuration.baseUrl = "https://plarium.com/ru/";
+        Configuration.browserSize = "1920x1080";
+        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC",true);
+        capabilities.setCapability("enableVideo",true);
+        Configuration.browserCapabilities = capabilities;
     }
 
     @AfterEach
@@ -37,9 +42,5 @@ public class TestBase {
         clearBrowserCookies();
         clearBrowserLocalStorage();
         closeWebDriver();
-
-        if (Project.isVideoOn()) {
-            AllureAttach.addVideo(sessionId);
-        }
     }
 }

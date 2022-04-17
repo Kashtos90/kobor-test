@@ -10,10 +10,6 @@ public class Project {
         return !webConfig.remoteUrl().equals("");
     }
 
-    public static boolean isVideoOn() {
-        return !webConfig.videoStorage().equals("");
-    }
-
     public static String browserName() {
         return webConfig.browserName();
     }
