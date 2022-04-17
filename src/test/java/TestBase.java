@@ -22,10 +22,8 @@ public class TestBase {
     static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.baseUrl = "https://plarium.com/ru/";
-        Configuration.browserSize = "1920x1080";
+        DriverConfig.configure();
         Configuration.remote = Project.remoteDriverUrl();
-//                System.getProperty("remoteDriverUrl");
-
 //                "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
