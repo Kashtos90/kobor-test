@@ -1,5 +1,6 @@
 package config;
 
+import org.aeonbits.owner.Config;
 import org.aeonbits.owner.ConfigFactory;
 
 public class Project {
@@ -12,5 +13,9 @@ public class Project {
 
     public static String browserName() {
         return webConfig.browserName();
+    }
+
+    public static String remoteUrl() {
+        return webConfig.remoteUrl();
     }
 }
