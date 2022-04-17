@@ -13,4 +13,9 @@ public class Project {
     public static String browserName() {
         return webConfig.browserName();
     }
+
+    public static String remoteDriverUrl() {
+        return webConfig.remoteUrl();
+    }
+
 }

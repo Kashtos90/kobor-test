@@ -1,7 +1,6 @@
-package config;
-
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.Project;
 import helpers.AllureAttach;
 import helpers.Attach;
 import helpers.DriverConfig;
@@ -24,7 +23,10 @@ public class TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.baseUrl = "https://plarium.com/ru/";
         Configuration.browserSize = "1920x1080";
-        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = Project.remoteDriverUrl();
+//                System.getProperty("remoteDriverUrl");
+
+//                "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC",true);
