@@ -7,8 +7,6 @@ import org.aeonbits.owner.Config;
         "system:properties",
         "classpath:config/local.properties",
         "classpath:config/remote.properties",
-        "classpath:config/user.properties"
-
 })
 public interface WebDriverConfig extends Config {
 
