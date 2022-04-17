@@ -41,5 +41,9 @@ public class TestBase {
         clearBrowserCookies();
         clearBrowserLocalStorage();
         closeWebDriver();
+
+        if (Project.isVideoOn()) {
+            AllureAttach.addVideo(sessionId);
+        }
     }
 }
