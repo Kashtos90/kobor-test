@@ -8,7 +8,8 @@ java \
 -jar allure-notifications-4.0.jar
 
 //Local
-java "-DprojectName=Local Test Run" "-Denv=PROD" "-DreportLink=Plarium/" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram_config.json" -jar notifications/allure-notifications-4.0.jar
+java "-DprojectName=Local Test Run" "-Denv=PROD" "-DreportLink=Plarium" "-Dcomm=Any comment here" "-Dconfig.file=notifications/telegram_config.json" -jar notifications/allure-notifications-4.0.jar
+
 
 //Jenkins
 java \
