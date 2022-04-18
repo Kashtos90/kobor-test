@@ -16,7 +16,7 @@ public class PlariumTests extends TestBase {
     @DisplayName("Проверка ошибочной авторизации")
     void badAuthTest() {
         step("Открыть главную страницу", () -> {
-            Selenide.open("ru/");
+            open(baseUrl);
         });
         step("Кликнуть Войти", () -> {
             $(withText("Войти")).click();
