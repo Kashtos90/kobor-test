@@ -1,3 +1,4 @@
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +16,7 @@ public class PlariumTests extends TestBase {
     @DisplayName("Проверка ошибочной авторизации")
     void badAuthTest() {
         step("Открыть главную страницу", () -> {
-            open(baseUrl + "/ru/");
+            Selenide.open("ru/");
         });
         step("Кликнуть Войти", () -> {
             $(withText("Войти")).click();
