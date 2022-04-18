@@ -27,7 +27,7 @@ public class DriverConfig {
                 chromeOptions.addArguments("--disable-infobars");
                 chromeOptions.addArguments("--disable-popup-blocking");
                 chromeOptions.addArguments("--disable-notifications");
-                chromeOptions.addArguments("--lang=de-de");
+                chromeOptions.addArguments("--lang=ru-RU");
                 capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
                 break;
             case "firefox":
