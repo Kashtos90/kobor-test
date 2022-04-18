@@ -24,10 +24,35 @@
 </p>
 
 ## :heavy_check_mark: Реализованные тесты:
-
+- Проверка ошибочной авторизации
+- Проверка успешной авторизации
+- Проверка отображения блога
+- Проверка англ. языка
+- Проверка списка жанров
 ## :robot: Сборка в Jenkins:
 
+## Параметры сборки в Jenkins
+- browser (браузер, по умолчанию chrome)
+- version (версия браузера, по умолчанию 100.0)
+- size (размер окна браузера, по умолчанию 1920x1080)
+- remoteUrl (адрес удаленного сервера selenoid)
+- threads (количество потоков)
 ## :computer: Запуск из терминала:
+Локальный запуск:
+```
+gradle clean test
+```
+
+Удаленный запуск:
+```
+clean
+test
+-Dbrowser=${BROWSER}
+-DremoteBrowser=${REMOTE_BROWSER}
+-Dversion=${VERSION}
+-Dsize=${BROWSER_SIZE}
+-Dthreads=${THREADS}
+```
 
 ## :bar_chart: Отчет Allure:
 
