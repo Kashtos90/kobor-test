@@ -23,7 +23,6 @@ public class TestBase {
     static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.baseUrl = "https://plarium.com/";
-        open(baseUrl + "ru/");
         DriverConfig.configure();
         //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
