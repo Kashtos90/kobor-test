@@ -22,7 +22,7 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        Configuration.baseUrl = "https://plarium.com/ru/";
+        Configuration.baseUrl = "https://plarium.com/de/";
         DriverConfig.configure();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();

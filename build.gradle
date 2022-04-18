@@ -73,7 +73,3 @@ tasks.withType(Test) {
         }
     }
 }
-
-test {
-    systemProperties['selenide.browser'] = System.getenv()['selenide.browser']
-}
