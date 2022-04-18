@@ -10,6 +10,18 @@
 - [Отчет в Telegram](https://github.com/Kashtos90/plarium_web/edit/main/README.md#calling-%D0%BE%D1%82%D1%87%D0%B5%D1%82-%D0%B2-telegram)
 - [Видео пример прохождения теста](https://github.com/Kashtos90/plarium_web/edit/main/README.md#film_strip-%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80-%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F-%D1%82%D0%B5%D1%81%D1%82%D0%B0)
 ## :hammer_and_wrench: Технологический стек:
+<p align="center">
+<img width="6%" title="IntelliJ IDEA" src="images/logo/Intelij_IDEA.svg">
+<img width="6%" title="Java" src="images/logo/Java.svg">
+<img width="6%" title="Selenide" src="images/logo/Selenide.svg">
+<img width="6%" title="Selenoid" src="images/logo/Selenoid.svg">
+<img width="6%" title="Allure Report" src="images/logo/Allure_Report.svg">
+<img width="6%" title="Gradle" src="images/logo/Gradle.svg">
+<img width="6%" title="JUnit5" src="images/logo/JUnit5.svg">
+<img width="6%" title="GitHub" src="images/logo/GitHub.svg">
+<img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
+<img width="6%" title="Telegram" src="images/logo/Telegram.svg">
+</p>
 
 ## :heavy_check_mark: Реализованные тесты:
 
