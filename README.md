@@ -1,7 +1,7 @@
 # Автоматизации тестирования :video_game: Plarium :video_game:
 ## Проект разработан для [Plarium.com](https://plarium.com/ru/)
 ## :bookmark_tabs: Содержание:
-
+- [Технологический стек](url)
 ## :hammer_and_wrench: Технологический стек:
 
 ## :heavy_check_mark: Реализованные тесты:
