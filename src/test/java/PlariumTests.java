@@ -18,10 +18,10 @@ public class PlariumTests extends TestBase {
         step("Открыть главную страницу", () -> {
             open(baseUrl);
         });
-        step("Кликнуть Войти", () -> {
+        step("Кликнуть 'Войти'", () -> {
             $(withText("Войти")).click();
         });
-        step("Ввести элетронную почту", () -> {
+        step("Ввести электронную почту", () -> {
             $("#email").setValue("29061900a@gmail.com").pressEnter();
         });
         step("Проверить, что форма авторизации выдала ошибку", () -> {
@@ -35,10 +35,10 @@ public class PlariumTests extends TestBase {
         step("Открыть главную страницу", () -> {
             open(baseUrl);
         });
-        step("Кликнуть Войти", () -> {
+        step("Кликнуть 'Войти'", () -> {
             $(withText("Войти")).click();
         });
-        step("Ввести элетронную почту", () -> {
+        step("Ввести электронную почту", () -> {
             $("#email").setValue("29061990a@gmail.com").pressEnter();
         });
         step("Ввести пароль", () -> {
@@ -58,10 +58,10 @@ public class PlariumTests extends TestBase {
         step("Открыть главную страницу", () -> {
             open(baseUrl);
         });
-        step("Навести курсор на Сообщество", () -> {
+        step("Навести курсор на 'Сообщество'", () -> {
             $(withText("Сообщество")).hover();
         });
-        step("Ссылка на Блог отображается во вкладке", () -> {
+        step("Ссылка на 'Блог' отображается во вкладке", () -> {
             $("a[href='/ru/blog/']").shouldBe(visible);
         });
     }
@@ -86,10 +86,10 @@ public class PlariumTests extends TestBase {
         step("Открыть главную страницу", () -> {
             open(baseUrl);
         });
-        step("Навести курсор на Игры", () -> {
+        step("Навести курсор на 'Игры'", () -> {
             $(withText("Игры")).hover();
         });
-        step("Элемент Жанры содержит Стратегии", () -> {
+        step("Элемент 'Жанры' содержит 'Стратегии'", () -> {
             $(".dkxMtQ").shouldHave(text("Стратегии"));
         });
     }
