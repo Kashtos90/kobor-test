@@ -42,12 +42,12 @@
 - remoteUrl (адрес удаленного сервера selenoid)
 - threads (количество потоков)
 ## :computer: Запуск из терминала
-Команда для локального запуска:
+Тесты можно запустить как локально:
 ```
 gradle clean test
 ```
 
-Команда для запуска на Selenoid:
+Так и удаленно через Selenoid:
 ```
 clean
 test
@@ -67,6 +67,11 @@ test
 
 ![allure rep2](https://user-images.githubusercontent.com/99273725/164040313-65722273-f4d3-449f-a8db-88297a4e24f0.png)
 ## :chart_with_upwards_trend: Интеграция с Allure TestOps
+> Ещё одним инструментом для визуализации и анализа использован отчёт в Allure TestOps
+
+![allure to1](https://user-images.githubusercontent.com/99273725/164053210-a28c98fc-4768-449a-a2ba-e0f58ed26922.png)
+
+![allure to2](https://user-images.githubusercontent.com/99273725/164054023-88624672-d081-4ee1-84bc-ff536a83e63c.png)
 
 ## :calling: Отчёт в Telegram
 > После завершения тестов в Telegram приходит уведомление с результатами
