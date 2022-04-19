@@ -55,12 +55,18 @@ test
 ```
 
 ## :bar_chart: Отчет Allure:
+> В отчёте можно получить общую информацию по тестам
 
+![allure rep1](https://user-images.githubusercontent.com/99273725/164039431-0f06abfe-19ff-4f66-84c2-dffec58081d3.png)
+
+> А также подробную информацию по каждому отдельно
+
+![allure rep2](https://user-images.githubusercontent.com/99273725/164040313-65722273-f4d3-449f-a8db-88297a4e24f0.png)
 ## :chart_with_upwards_trend: Интеграция с Allure TestOps:
 
 ## :calling: Отчет в Telegram:
 
-## :film_strip: Видео-пример прохождения теста:
-> В отчёте к каждому тесту прилагается видео.
+## :film_strip: Видео-пример теста:
+> Также, к каждому тесту прилагается видео с поэтапным прохождением.
 
 ![selenoid](https://user-images.githubusercontent.com/99273725/164035550-05fef5f8-50e3-41c0-aa9c-894646776e7e.gif)
