@@ -60,4 +60,7 @@ test
 
 ## :calling: Отчет в Telegram:
 
-## :film_strip: Видео пример прохождения теста:
+## :film_strip: Видео-пример прохождения теста:
+> В отчёте к каждому тесту прилагается видео.
+
+![selenoid](https://user-images.githubusercontent.com/99273725/164035550-05fef5f8-50e3-41c0-aa9c-894646776e7e.gif)
