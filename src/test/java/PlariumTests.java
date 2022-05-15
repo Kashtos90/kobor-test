@@ -25,7 +25,7 @@ public class PlariumTests extends TestBase {
             loginObjects.loginClick();
         });
         step("Ввести электронную почту", () -> {
-            loginObjects.setEmail(email);
+            loginObjects.setBadEmail(bademail);
         });
         step("Проверить, что форма авторизации выдала ошибку", () -> {
             loginObjects.checkError(accerror);
