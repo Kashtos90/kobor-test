@@ -29,19 +29,19 @@ public class LoginObjects {
     }
 
     public LoginObjects setEmail (String email) {
-        emailInput.setValue(email);
+        emailInput.setValue(email).pressEnter();
 
         return this;
     }
 
     public LoginObjects setBadEmail (String bademail) {
-        emailInput.setValue(bademail);
+        emailInput.setValue(bademail).pressEnter();
 
         return this;
     }
 
     public LoginObjects setPassword (String password) {
-        passwordInput.setValue(password);
+        passwordInput.setValue(password).pressEnter();
 
         return this;
     }
