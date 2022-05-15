@@ -39,19 +39,19 @@ public class PlariumTests extends TestBase {
             open(baseUrl);
         });
         step("Кликнуть 'Войти'", () -> {
-            $(withText("Войти")).click();
+            loginObjects.loginClick();
         });
         step("Ввести электронную почту", () -> {
-            $("#email").setValue("29061990a@gmail.com").pressEnter();
+            loginObjects.setEmail(email);
         });
         step("Ввести пароль", () -> {
-            $("#password").setValue("rfinetd29").pressEnter();
+            loginObjects.setPassword(password);
         });
         step("Перейти в профиль ", () -> {
-            $(".giJlUH").click();
+            loginObjects.goToProfile();
         });
         step("Проверить никнейм", () -> {
-            $(".fFgwTx").shouldHave(text("Kashtos90"));
+            loginObjects.checkProfileName(nickname);
         });
     }
 
