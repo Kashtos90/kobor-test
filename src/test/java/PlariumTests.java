@@ -22,13 +22,13 @@ public class PlariumTests extends TestBase {
             open(baseUrl);
         });
         step("Кликнуть 'Войти'", () -> {
-            $(withText("Войти")).click();
+            loginObjects.loginClick();
         });
         step("Ввести электронную почту", () -> {
-            $("#email").setValue("29061900a@gmail.com").pressEnter();
+            loginObjects.setEmail(email);
         });
         step("Проверить, что форма авторизации выдала ошибку", () -> {
-            $(".cWCQHG").shouldHave(text("Пользователь с таким адресом электронной почты не найден. Проверь адрес, зарегистрируйся или обратись в службу поддержки Plarium"));
+            loginObjects.checkError(accerror);
         });
     }
 
