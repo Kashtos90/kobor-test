@@ -69,7 +69,7 @@ test
 
 ![allure rep2](https://user-images.githubusercontent.com/99273725/164040313-65722273-f4d3-449f-a8db-88297a4e24f0.png)
 ## :chart_with_upwards_trend: Интеграция с Allure TestOps
-> Ещё одним инструментом для визуализации и анализа использован отчёт в Allure TestOps
+> Ещё одним инструментом для визуализации и анализа используется Allure TestOps.
 
 ![allure to1](https://user-images.githubusercontent.com/99273725/164053210-a28c98fc-4768-449a-a2ba-e0f58ed26922.png)
 
