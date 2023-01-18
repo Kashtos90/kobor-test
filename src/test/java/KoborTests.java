@@ -13,7 +13,6 @@ public class KoborTests extends TestBase {
     void doublingTest() {
         step("Открыть главную страницу", () -> {
             open(baseUrl);
-            sleep (10000000);
         });
         step("Потвердить город", () -> {
             loginObjects.approveClick();
