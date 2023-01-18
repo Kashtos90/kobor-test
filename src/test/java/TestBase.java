@@ -1,8 +1,7 @@
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import helpers.Attach;
-import helpers.DriverConfig;
-import helpers.LoginObjects;
+import helpers.PageObjects;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -12,7 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static org.openqa.selenium.devtools.v85.network.Network.clearBrowserCookies;
 
 public class TestBase {
-    LoginObjects loginObjects = new LoginObjects();
+    PageObjects pageObjects = new PageObjects();
 
     String request = "rj,jh";
     String response = "кобор";

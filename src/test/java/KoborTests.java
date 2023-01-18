@@ -14,16 +14,16 @@ public class KoborTests extends TestBase {
             open(baseUrl);
         });
         step("Потвердить город", () -> {
-            loginObjects.approveClick();
+            pageObjects.approveClick();
         });
         step("Кликнуть на поисковую строку", () -> {
-            loginObjects.searchClick();
+            pageObjects.searchClick();
         });
         step("Ввести запрос кириллицей на англ. раскладке", () -> {
-            loginObjects.setRequest(request);
+            pageObjects.setRequest(request);
         });
         step("В результатах поиска отображается запрос на кириллице", () -> {
-            loginObjects.checkResults(response);
+            pageObjects.checkResults(response);
         });
     }
 }
