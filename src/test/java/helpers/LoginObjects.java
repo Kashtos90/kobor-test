@@ -9,11 +9,11 @@ import static com.codeborne.selenide.Selenide.$;
 public class LoginObjects {
 
     public SelenideElement
-            closeCross = $(".fJjmog"),
+            closeCity = $(withText("Да, верно")),
             searchSection = $(withText("Поиск"));
 
-    public LoginObjects crossClick() {
-        closeCross.click();
+    public LoginObjects approveClick() {
+        closeCity.click();
 
         return this;
     }

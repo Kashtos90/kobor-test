@@ -15,8 +15,8 @@ public class KoborTests extends TestBase {
             open(baseUrl);
             sleep (10000000);
         });
-        step("Закрыть окно выбора города", () -> {
-            loginObjects.crossClick();
+        step("Потвердить город", () -> {
+            loginObjects.approveClick();
         });
         step("Кликнуть на поисковую строку", () -> {
             loginObjects.searchClick();
