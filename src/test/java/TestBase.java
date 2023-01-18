@@ -15,10 +15,7 @@ public class TestBase {
     LoginObjects loginObjects = new LoginObjects();
 
     String request = "rj,jh";
-    String bademail = "29061900a@gmail.com";
-    String accerror = "Пользователь с таким адресом электронной почты не найден. Проверь адрес, зарегистрируйся или обратись в службу поддержки Plarium";
-    String password = "rfinetd29";
-    String nickname = "Kashtos90";
+    String response = "кобор";
 
     @BeforeAll
     static void beforeAll() {

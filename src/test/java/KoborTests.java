@@ -20,8 +20,11 @@ public class KoborTests extends TestBase {
         step("Кликнуть на поисковую строку", () -> {
             loginObjects.searchClick();
         });
-        step("Ввести запрос по-русски на англ. раскладке", () -> {
+        step("Ввести запрос кириллицей на англ. раскладке", () -> {
             $(withText("Поиск")).click();
+        });
+        step("В результатах поиска отображается запрос кириллицей", () -> {
+            loginObjects.searchClick();
         });
     }
 }
