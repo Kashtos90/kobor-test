@@ -10,7 +10,8 @@ public class LoginObjects {
 
     public SelenideElement
             closeCity = $(withText("Да, верно")),
-            searchSection = $(withText("Поиск"));
+            searchSection = $(withText("Поиск")),
+            searchResults = $(".cFaInH");
 
     public LoginObjects approveClick() {
         closeCity.click();
@@ -20,6 +21,18 @@ public class LoginObjects {
 
     public LoginObjects searchClick() {
         searchSection.click();
+
+        return this;
+    }
+
+    public LoginObjects setRequest (String request) {
+        searchResults.setValue(request);
+
+        return this;
+    }
+
+    public LoginObjects checkResults (String response) {
+        searchResults.shouldHave(text(response));
 
         return this;
     }

@@ -2,8 +2,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
-import static com.codeborne.selenide.Selectors.withText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 public class KoborTests extends TestBase {
@@ -21,10 +20,10 @@ public class KoborTests extends TestBase {
             loginObjects.searchClick();
         });
         step("Ввести запрос кириллицей на англ. раскладке", () -> {
-            $(withText("Поиск")).click();
+            loginObjects.setRequest(request);
         });
         step("В результатах поиска отображается запрос на кириллице", () -> {
-            loginObjects.searchClick();
+            loginObjects.checkResults(response);
         });
     }
 }
