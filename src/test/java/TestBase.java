@@ -14,7 +14,7 @@ import static org.openqa.selenium.devtools.v85.network.Network.clearBrowserCooki
 public class TestBase {
     LoginObjects loginObjects = new LoginObjects();
 
-    String email = "29061990a@gmail.com";
+    String request = "rj,jh";
     String bademail = "29061900a@gmail.com";
     String accerror = "Пользователь с таким адресом электронной почты не найден. Проверь адрес, зарегистрируйся или обратись в службу поддержки Plarium";
     String password = "rfinetd29";

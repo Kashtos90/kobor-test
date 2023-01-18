@@ -10,14 +10,18 @@ public class KoborTests extends TestBase {
 
     @Test
     @DisplayName("Проверка автозамены запроса")
-    void blogTest() {
+    void doublingTest() {
         step("Открыть главную страницу", () -> {
             open(baseUrl);
+            sleep (10000000);
+        });
+        step("Закрыть окно выбора города", () -> {
+            loginObjects.crossClick();
         });
         step("Кликнуть на поисковую строку", () -> {
-            $(withText("Поиск")).click();
+            loginObjects.searchClick();
         });
-        step("Ввести 'RJ<JH'", () -> {
+        step("Ввести запрос по-русски на англ. раскладке", () -> {
             $(withText("Поиск")).click();
         });
     }

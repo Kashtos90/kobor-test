@@ -9,51 +9,17 @@ import static com.codeborne.selenide.Selenide.$;
 public class LoginObjects {
 
     public SelenideElement
-            errorSection = $(".cWCQHG"),
-            loginButton = $(withText("Войти")),
-            emailInput = $("#email"),
-            passwordInput = $("#password"),
-            profilePage = $(".giJlUH"),
-            nickName = $(".fFgwTx");
+            closeCross = $(".fJjmog"),
+            searchSection = $(withText("Поиск"));
 
-    public LoginObjects checkError (String accerror) {
-        errorSection.shouldHave(text(accerror));
+    public LoginObjects crossClick() {
+        closeCross.click();
 
         return this;
     }
 
-    public LoginObjects loginClick () {
-        loginButton.click();
-
-        return this;
-    }
-
-    public LoginObjects setEmail (String email) {
-        emailInput.setValue(email).pressEnter();
-
-        return this;
-    }
-
-    public LoginObjects setBadEmail (String bademail) {
-        emailInput.setValue(bademail).pressEnter();
-
-        return this;
-    }
-
-    public LoginObjects setPassword (String password) {
-        passwordInput.setValue(password).pressEnter();
-
-        return this;
-    }
-
-    public LoginObjects goToProfile () {
-        profilePage.click();
-
-        return this;
-    }
-
-    public LoginObjects checkProfileName (String nickname) {
-        nickName.shouldHave(text(nickname));
+    public LoginObjects searchClick() {
+        searchSection.click();
 
         return this;
     }
