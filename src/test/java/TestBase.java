@@ -23,8 +23,8 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        Configuration.baseUrl = "https://plarium.com/ru/";
-        DriverConfig.configure();
+        Configuration.baseUrl = "https://kobor.teslaserver.ru/";
+       // DriverConfig.configure();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC",true);
