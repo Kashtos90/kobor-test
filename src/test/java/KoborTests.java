@@ -9,7 +9,7 @@ public class KoborTests extends TestBase {
 
     @Test
     @DisplayName("Проверка автозамены запроса")
-    void doublingTest() {
+    void autocorrectTest() {
         step("Открыть главную страницу", () -> {
             open(baseUrl);
         });
