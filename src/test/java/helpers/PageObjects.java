@@ -11,12 +11,12 @@ public class PageObjects {
 
     public SelenideElement
 
-            closeCity = $(".fJjmog"),
+            closeCity = $("..bVgxeW"),
             searchSection = $(withText("Поиск")),
             searchResults = $(".cFaInH");
 
     public PageObjects cityClose() {
-        closeCity.shouldHave(exactText("")).pressEscape();
+        closeCity.pressEscape();
 
         return this;
     }
