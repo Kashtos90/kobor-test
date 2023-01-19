@@ -15,7 +15,7 @@ public class KoborTests extends TestBase {
         step("Открыть главную страницу", () -> {
             open(baseUrl);
         });
-        step("Закрыть окно выбора города", () -> {
+        step("Кликнуть на поисковую строку", () -> {
             pageObjects.cityClose();
         });
         step("Кликнуть на поисковую строку", () -> {

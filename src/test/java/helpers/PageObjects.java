@@ -9,12 +9,13 @@ import static com.codeborne.selenide.Selenide.$;
 public class PageObjects {
 
     public SelenideElement
-            closeCity = $(".fJjmog").shouldHave(text("Ваш город")),
+
+            closeCity = $(".fJjmog"),
             searchSection = $(withText("Поиск")),
             searchResults = $(".cFaInH");
 
     public PageObjects cityClose() {
-        closeCity.pressEscape();
+        closeCity.shouldHave(text("Ваш город")).pressEscape();
 
         return this;
     }
