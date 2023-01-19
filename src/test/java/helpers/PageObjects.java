@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class PageObjects {
 
     public SelenideElement
-            closeCity = $("#__next"),
+            closeCity = $(".jHMwei"),
             searchSection = $(withText("Поиск")),
             searchResults = $(".cFaInH");
 
