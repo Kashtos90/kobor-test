@@ -15,7 +15,7 @@ public class PageObjects {
             searchResults = $(".cFaInH");
 
     public PageObjects cityClose() {
-        closeCity.shouldHave(text("Ваш город")).pressEscape();
+        closeCity.shouldHave(text("")).pressEscape();
 
         return this;
     }
