@@ -11,7 +11,7 @@ public class PageObjects {
 
     public SelenideElement
 
-            closeCity = $("..bVgxeW"),
+            closeCity = $(".bVgxeW"),
             searchSection = $(withText("Поиск")),
             searchResults = $(".cFaInH");
 

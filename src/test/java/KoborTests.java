@@ -14,9 +14,8 @@ public class KoborTests extends TestBase {
     void autocorrectTest() {
         step("Открыть главную страницу", () -> {
             open(baseUrl);
-            sleep(1000000);
         });
-        step("Кликнуть на поисковую строку", () -> {
+        step("Закрыть окно с выбором города", () -> {
             pageObjects.cityClose();
         });
         step("Кликнуть на поисковую строку", () -> {
