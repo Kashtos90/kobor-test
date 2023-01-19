@@ -1,6 +1,7 @@
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import helpers.Attach;
+import helpers.DriverConfig;
 import helpers.PageObjects;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -20,7 +21,7 @@ public class TestBase {
     static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.baseUrl = "https://kobor.teslaserver.ru/";
-       // DriverConfig.configure(); // отключен запуск через удаленный рабочий стол
+        DriverConfig.configure();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC",true);
